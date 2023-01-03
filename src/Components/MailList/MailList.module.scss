@@ -1,0 +1,212 @@
+@import "./../../Utils/colors";
+@import "./../../Utils/resuables";
+
+.wrapper {
+    height: 100%;
+    border-right: 1.2px solid $cloud;
+
+    header {
+        height: 55px;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1.2px solid $cloud;
+
+        span {
+            font-weight: 600;
+        }
+
+        .flagSpan {
+            font-weight: 400;
+            font-size: 0.8em;
+            padding: 5px;
+            transition: all 200ms ease-out;
+            background-color: $sky-green;
+            border-radius: 2px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            svg {
+                margin-left: 5px;
+                color: $light-red;
+            }
+            &:hover {
+                svg {
+                    color: $dark-red;
+                }
+            }
+        }
+
+        div {
+            position: relative;
+            transition: all 200ms ease-out;
+
+            &:hover {
+                background-color: $medium-grey;
+                border-radius: 3px;
+            }
+
+            &:focus {
+                outline: none;
+            }
+
+            span {
+                font-weight: 400;
+                font-size: 0.8em;
+                display: inline-block;
+                padding: 5px;
+                transition: all 200ms ease-out;
+                cursor: pointer;
+            }
+            section {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                transform: translateY(100%);
+                width: 100%;
+                background-color: white;
+                border-radius: 2px;
+                box-shadow: rgba(0, 0, 0, 0.133) 0px 3.2px 7.2px 0px, rgba(0, 0, 0, 0.11) 0px 0.6px 1.8px 0px;
+                cursor: pointer;
+                span {
+                    cursor: pointer;
+                    display: inline-block;
+                    width: 100%;
+                    background-color: $cloud;
+                    border-radius: 3px;
+                    background-color: white;
+                    &:hover {
+                        background-color: $cloud;
+                    }
+                }
+            }
+        }
+    }
+    main {
+        height: calc(100% - 55px);
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            overflow-y: auto;
+            @include customScrollBar;
+
+            li:hover,
+            li.selected {
+                background-color: $cloud;
+            }
+
+            li {
+                margin: 0;
+                padding: 10px 1rem 10px 12px;
+                border-bottom: 1.2px solid $cloud;
+                border-left: 4px solid transparent;
+                transition: all 200ms ease-out;
+
+                &.notVisited {
+                    border-left-color: $medium-blue;
+                }
+
+                .iconTitleWrapper {
+                    display: flex;
+                    justify-content: space-between;
+                    .mId {
+                        @include textOverflow;
+                        font-size: 0.9em;
+                        max-width: 60%;
+                    }
+
+                    .iconWrapper {
+                        font-size: 0.8em;
+                        .iconStyles {
+                            margin-left: 5px;
+                            cursor: pointer;
+                            color: $dark-grey;
+
+                            &:hover {
+                                color: black;
+                            }
+
+                            &.iconFlagSelectedStyles {
+                                color: $light-red;
+                                display: inline !important;
+
+                                &:hover {
+                                    color: $dark-red;
+                                }
+                            }
+                        }
+
+                        .iconDeleteStyles {
+                            display: none;
+                        }
+                        .iconEnvelopeStyles {
+                            display: none;
+                        }
+                        .iconFlagStyles {
+                            display: none;
+                        }
+                    }
+                }
+
+                .subjectContent {
+                    @include textOverflow;
+                    font-size: 0.85em;
+                    color: $dark-grey;
+
+                    &.notVisited {
+                        color: $medium-blue;
+                        font-weight: 600;
+                    }
+                }
+
+                &:hover {
+                    .iconWrapper {
+                        .iconDeleteStyles {
+                            display: inline;
+                        }
+                        .iconEnvelopeStyles {
+                            display: inline;
+                        }
+                        .iconFlagStyles {
+                            display: inline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.fallBackStyles {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    span:nth-child(2) {
+        font-weight: 600;
+        font-size: 0.9em;
+        margin: 20px 0 10px 0;
+    }
+
+    span:nth-child(3) {
+        font-weight: 400;
+        font-size: 0.8em;
+    }
+
+    img {
+        width: 80%;
+        object-fit: cover;
+    }
+}
+
+.iconStyles {
+    margin-right: 5px;
+    color: $dark-blue;
+}
