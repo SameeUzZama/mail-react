@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/mail-react/static/css/main.16a42869.chunk.css",
+    "main.js": "/mail-react/static/js/main.98e4361a.chunk.js",
+    "main.js.map": "/mail-react/static/js/main.98e4361a.chunk.js.map",
+    "runtime-main.js": "/mail-react/static/js/runtime-main.c537934c.js",
+    "runtime-main.js.map": "/mail-react/static/js/runtime-main.c537934c.js.map",
+    "static/js/2.56d59546.chunk.js": "/mail-react/static/js/2.56d59546.chunk.js",
+    "static/js/2.56d59546.chunk.js.map": "/mail-react/static/js/2.56d59546.chunk.js.map",
+    "index.html": "/mail-react/index.html",
+    "precache-manifest.121dda1373ced801019194bf0e3271d6.js": "/mail-react/precache-manifest.121dda1373ced801019194bf0e3271d6.js",
+    "service-worker.js": "/mail-react/service-worker.js",
+    "static/css/main.16a42869.chunk.css.map": "/mail-react/static/css/main.16a42869.chunk.css.map",
+    "static/js/2.56d59546.chunk.js.LICENSE.txt": "/mail-react/static/js/2.56d59546.chunk.js.LICENSE.txt",
+    "static/media/index.scss": "/mail-react/static/media/OpenSans-SemiBold.ba5cde21.ttf",
+    "static/media/envelope.svg": "/mail-react/static/media/envelope.0b6ed872.svg",
+    "static/media/nomail.svg": "/mail-react/static/media/nomail.d9d021d5.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c537934c.js",
+    "static/js/2.56d59546.chunk.js",
+    "static/css/main.16a42869.chunk.css",
+    "static/js/main.98e4361a.chunk.js"
+  ]
+}
